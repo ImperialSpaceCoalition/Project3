@@ -1,17 +1,18 @@
 import React from "react";
-
+import {Link} from "react-router-dom"
 function Navbar() {
   return (
-    <nav>
-      <ul>
+    <nav className = "header">
+      <h2>Finding Fido</h2>
+      <ul className = "nav-link">
         <li>
-          <a href="/">Home</a>
+          <Link to = "/">Home</Link>
         </li>
         <li>
-          <a href="/pets">Pets</a>
+          <Link to = "/pets">Pets</Link>
         </li>
         <li>
-          <a href="/profile">Profile</a>
+          <Link to = "/profile">User Profile</Link>
         </li>
       </ul>
     </nav>
