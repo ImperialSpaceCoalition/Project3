@@ -5,14 +5,29 @@
 .header{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
+  margin-right: 50px;
 }
+
 
 .nav-link{
   list-style-type: none;
   display: flex;
+  margin: 20px;
 }
 
-.nav-link li {
-  margin: 15px;
+.header-body{
+  height: 175px;
+  background-color: red;
+}
+
+.home-card{
+  height: 150px;
+  width: 150px;
+}
+
+.animal-link{
+  height: 100px;
+  width: 150px;
+  background-color: yellow;
 }
