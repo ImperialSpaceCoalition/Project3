@@ -1,5 +1,5 @@
 const User = require('../models/user');
-const Post = require('../models/post');
+const Post = require('../models/posts');
 const mockUsers = [
     {
         username: 'user1',
@@ -29,18 +29,30 @@ const seedDatabase = async () => {
         // Clear existing data
         await User.deleteMany();
         await Post.deleteMany();
+
         // Seed mock users
-        const users = await User.insertMany(mockUsers);
+        for (let user of mockUsers) {
+            const existingUser = await User.findOne({ email: user.email });
+            if (!existingUser) {
+                await User.create(user);
+            }
+        }
+
+        // Get all users from the database
+        const users = await User.find();
+
         // Assign user IDs to posts
         const postsWithAuthor = mockPosts.map(post => {
             post.author = users.find(user => user.username === 'user1')._id;
             return post;
         });
-        // Seed mock posts
+
+        // Insert the posts into the database
         await Post.insertMany(postsWithAuthor);
-        console.log('Database initialized successfully');
-    } catch (error) {
-        console.error('Error seeding database:', error);
+
+        console.log('Database seeded successfully');
+    } catch (err) {
+        console.error('Error seeding database:', err);
     }
 };
 module.exports = seedDatabase;
