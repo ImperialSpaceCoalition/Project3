@@ -41,7 +41,7 @@ function Home() {
           <div className='animal-link'>
             <h2>Dogs</h2>
             <img className="home-image" alt="animal pic" src={DogPic} />
-            <a href="/">Check Out Dogs</a>
+            <a href="/dogs">Check Out Dogs</a>
           </div>
         </Col>
 
@@ -49,7 +49,7 @@ function Home() {
         <div className='animal-link'>
             <h2>Cats</h2>
             <img className="home-image" alt="animal pic" src={CatPic} />
-            <a href="/">Check Out Cats</a>
+            <a href="/cats">Check Out Cats</a>
           </div>
         </Col>
         
@@ -57,7 +57,7 @@ function Home() {
         <div className="animal-link">
             <h2>Rabbits</h2>
             <img className="home-image" alt="animal pic" src={RabbitPic} />
-            <a href="/">Check Out Rabbits</a>
+            <a href="/rabbits">Check Out Rabbits</a>
           </div>
         </Col>
 
@@ -65,7 +65,7 @@ function Home() {
          <div className="animal-link">
             <h2>Ferrets</h2>
             <img className="home-image" alt="animal pic" src={FerretPic} />
-            <a href="/">Check Out Ferrets</a>
+            <a href="/ferrets">Check Out Ferrets</a>
          </div>
         </Col>
 
@@ -73,7 +73,7 @@ function Home() {
          <div className="animal-link">
             <h2>Guinea Pigs</h2>
             <img className="home-image" alt="animal pic" src={GuineaPigPic}/>
-            <a href="/">Check Out Guinea Pigs</a>
+            <a href="/guineapigs">Check Out Guinea Pigs</a>
          </div>
         </Col>
 
@@ -81,7 +81,7 @@ function Home() {
          <div className="animal-link">
             <h2>Hamsters/Gerbils</h2>
             <img className="home-image" alt="animal pic" src={HamsterPic} />
-            <a href="/">Check Out Hamsters and Gerbils</a>
+            <a href="/hamstersgerbils">Check Out Hamsters and Gerbils</a>
          </div>
         </Col>
         
