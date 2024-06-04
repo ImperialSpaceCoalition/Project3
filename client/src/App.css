@@ -17,7 +17,7 @@
 }
 
 .header-body{
-  height: 175px;
+  height: 75px;
   background-color: red;
 }
 
@@ -27,7 +27,15 @@
 }
 
 .animal-link{
-  height: 100px;
-  width: 150px;
-  background-color: yellow;
+  height: 200px;
+  width: 300px;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: darkgray;
+}
+
+.home-image{
+  width: 100px;
+  height: 80px;
 }

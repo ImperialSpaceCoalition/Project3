@@ -4,6 +4,12 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import {Container} from "react-bootstrap"
+import DogPic from "./images/dog_image.jpeg";
+import CatPic from "./images/cat_image.jpg";
+import FerretPic from "./images/ferret_image.jpeg";
+import RabbitPic from "./images/rabbit_image.jpeg";
+import GuineaPigPic from "./images/guinea_pig_image.jpg";
+import HamsterPic from "./images/hamster_image.jpg";
 function Home() {
   return (
     <div>
@@ -14,7 +20,7 @@ function Home() {
         {/* animal of the week card on first 4/12 of page */}
         <Col sm={4}>
           <Card.Title>Animal of the Week</Card.Title>
-          <Card style={{ width: '18rem' }}>
+          <Card style={{ width: '25rem', height: '30rem' }}>
          <Card.Img variant="top" src="holder.js/100px180" />
          <Card.Body>
           
@@ -34,7 +40,7 @@ function Home() {
         <Col>
           <div className='animal-link'>
             <h2>Dogs</h2>
-            {/* <img src="" /> */}
+            <img className="home-image" alt="animal pic" src={DogPic} />
             <a href="/">Check Out Dogs</a>
           </div>
         </Col>
@@ -42,24 +48,48 @@ function Home() {
         <Col>
         <div className='animal-link'>
             <h2>Cats</h2>
-            {/* <img src="" /> */}
+            <img className="home-image" alt="animal pic" src={CatPic} />
             <a href="/">Check Out Cats</a>
           </div>
         </Col>
+        
         <Col>
-        <div className='animal-link'>
+        <div className="animal-link">
             <h2>Rabbits</h2>
-            {/* <img src="" /> */}
+            <img className="home-image" alt="animal pic" src={RabbitPic} />
             <a href="/">Check Out Rabbits</a>
           </div>
         </Col>
+
+        <Col>
+         <div className="animal-link">
+            <h2>Ferrets</h2>
+            <img className="home-image" alt="animal pic" src={FerretPic} />
+            <a href="/">Check Out Ferrets</a>
+         </div>
+        </Col>
+
+        <Col>
+         <div className="animal-link">
+            <h2>Guinea Pigs</h2>
+            <img className="home-image" alt="animal pic" src={GuineaPigPic}/>
+            <a href="/">Check Out Guinea Pigs</a>
+         </div>
+        </Col>
+
+        <Col>
+         <div className="animal-link">
+            <h2>Hamsters/Gerbils</h2>
+            <img className="home-image" alt="animal pic" src={HamsterPic} />
+            <a href="/">Check Out Hamsters and Gerbils</a>
+         </div>
+        </Col>
+        
+
+        
       </Row>
-      
-      <Row>
-        <Col>1 of 3</Col>
-        <Col>2 of 3</Col>
-        <Col>3 of 3</Col>
-      </Row>
+
+     
     </Container>
         </Col>
       </Row>
