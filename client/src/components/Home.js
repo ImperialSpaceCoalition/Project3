@@ -39,49 +39,49 @@ function Home() {
 
         <Col>
           <div className='animal-link'>
-            <h2>Dogs</h2>
+            <a href="/dogs">Dogs</a>
             <img className="home-image" alt="animal pic" src={DogPic} />
-            <a href="/dogs">Check Out Dogs</a>
+            {/* <a href="/dogs">Dogs</a> */}
           </div>
         </Col>
 
         <Col>
         <div className='animal-link'>
-            <h2>Cats</h2>
+            <a href="/cats">Cats</a>
             <img className="home-image" alt="animal pic" src={CatPic} />
-            <a href="/cats">Check Out Cats</a>
+            {/* <a href="/cats">Cats</a> */}
           </div>
         </Col>
         
         <Col>
         <div className="animal-link">
-            <h2>Rabbits</h2>
+            <a href="/rabbits">Rabbits</a>
             <img className="home-image" alt="animal pic" src={RabbitPic} />
-            <a href="/rabbits">Check Out Rabbits</a>
+            {/* <a href="/rabbits">Rabbits</a> */}
           </div>
         </Col>
 
         <Col>
          <div className="animal-link">
-            <h2>Ferrets</h2>
+            <a href="/ferrets">Ferrets</a>
             <img className="home-image" alt="animal pic" src={FerretPic} />
-            <a href="/ferrets">Check Out Ferrets</a>
+            {/* <a href="/ferrets">Ferrets</a> */}
          </div>
         </Col>
 
         <Col>
          <div className="animal-link">
-            <h2>Guinea Pigs</h2>
+            <a href="/guineapigs">Guinea Pigs</a>
             <img className="home-image" alt="animal pic" src={GuineaPigPic}/>
-            <a href="/guineapigs">Check Out Guinea Pigs</a>
+            {/* <a href="/guineapigs">Check Out Guinea Pigs</a> */}
          </div>
         </Col>
 
         <Col>
          <div className="animal-link">
-            <h2>Hamsters/Gerbils</h2>
+            <a href="/hamstersgerbils">Hamsters/Gerbils</a>
             <img className="home-image" alt="animal pic" src={HamsterPic} />
-            <a href="/hamstersgerbils">Check Out Hamsters and Gerbils</a>
+            {/* <a href="/hamstersgerbils">Check Out Hamsters and Gerbils</a> */}
          </div>
         </Col>
         
