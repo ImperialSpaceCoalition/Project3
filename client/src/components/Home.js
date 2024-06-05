@@ -14,20 +14,22 @@ function Home() {
   return (
     <div>
       <h1>Welcome to Finding Fido</h1>
-      <p>Adopt a family member today!</p>
+      
+      <Button variant="primary" href="/pets">Adopt a family member today!</Button>
       <Container>
       <Row>
         {/* animal of the week card on first 4/12 of page */}
+        
         <Col sm={4}>
           <Card.Title>Animal of the Week</Card.Title>
-          <Card style={{ width: '25rem', height: '30rem', backgroundColor:"lightcoral" }}>
+          <Card style={{ width: '25rem', height: '30rem', backgroundColor:"lightseagreen" }}>
          <Card.Img variant="top" src="holder.js/100px180" />
          <Card.Body>
           
           <Card.Text>
           A brief explanation of the animal's personality and needs for a home and family.
           </Card.Text>
-          <Button variant="primary">Adopt</Button>
+          {/* <Button variant="primary">Adopt</Button> */}
         </Card.Body>
           </Card>
         </Col>
@@ -40,14 +42,14 @@ function Home() {
         <Col>
           <div className='animal-link'>
             <img className="home-image" alt="animal pic" src={DogPic} />
-            <a className="link-button" href="/dogs"><Button variant="primary">Adopt a Dog</Button></a>
+            {/* <a className="link-button" href="/dogs"><Button variant="primary">Adopt a Dog</Button></a> */}
           </div>
         </Col>
 
         <Col>
         <div className='animal-link'>
           <img className="home-image" alt="animal pic" src={CatPic} />
-            <a className="link-button" href="/cats"><Button>Adopt a Cat</Button></a>
+            {/* <a className="link-button" href="/cats"><Button>Adopt a Cat</Button></a> */}
 
             {/* <a href="/cats">Cats</a> */}
           </div>
@@ -56,7 +58,7 @@ function Home() {
         <Col>
         <div className="animal-link">
             <img className="home-image" alt="animal pic" src={RabbitPic} />
-            <a className="link-button" href="/rabbits"><Button>Adopt a Rabbit</Button></a>
+            {/* <a className="link-button" href="/rabbits"><Button>Adopt a Rabbit</Button></a> */}
             {/* <a href="/rabbits">Rabbits</a> */}
           </div>
         </Col>
@@ -64,7 +66,7 @@ function Home() {
         <Col>
          <div className="animal-link">
            <img className="home-image" alt="animal pic" src={FerretPic} />  
-           <a className="link-button" href="/ferrets"><Button>Adopt a Ferret</Button></a>
+           {/* <a className="link-button" href="/ferrets"><Button>Adopt a Ferret</Button></a> */}
             {/* <a href="/ferrets">Ferrets</a> */}
          </div>
         </Col>
@@ -72,7 +74,7 @@ function Home() {
         <Col>
          <div className="animal-link">
            <img className="home-image" alt="animal pic" src={GuineaPigPic}/>
-           <a className="link-button-guineapig" href="/guineapigs"><Button>Adopt a Guinea Pig</Button></a>
+           {/* <a className="link-button-guineapig" href="/guineapigs"><Button>Adopt a Guinea Pig</Button></a> */}
             {/* <a href="/guineapigs">Check Out Guinea Pigs</a> */}
          </div>
         </Col>
@@ -80,7 +82,7 @@ function Home() {
         <Col>
          <div className="animal-link">
            <img className="home-image" alt="animal pic" src={HamsterPic} />
-           <a className="link-button-gerbil" href="/hamstersgerbils"><Button>Adopt a Hamster/Gerbil</Button></a>
+           {/* <a className="link-button-gerbil" href="/hamstersgerbils"><Button>Adopt a Hamster/Gerbil</Button></a> */}
             {/* <a href="/hamstersgerbils">Check Out Hamsters and Gerbils</a> */}
          </div>
         </Col>
