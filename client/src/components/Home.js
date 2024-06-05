@@ -20,7 +20,7 @@ function Home() {
         {/* animal of the week card on first 4/12 of page */}
         <Col sm={4}>
           <Card.Title>Animal of the Week</Card.Title>
-          <Card style={{ width: '25rem', height: '30rem' }}>
+          <Card style={{ width: '25rem', height: '30rem', backgroundColor:"lightcoral" }}>
          <Card.Img variant="top" src="holder.js/100px180" />
          <Card.Body>
           
@@ -39,48 +39,48 @@ function Home() {
 
         <Col>
           <div className='animal-link'>
-            <a href="/dogs">Dogs</a>
             <img className="home-image" alt="animal pic" src={DogPic} />
-            {/* <a href="/dogs">Dogs</a> */}
+            <a className="link-button" href="/dogs"><Button variant="primary">Adopt a Dog</Button></a>
           </div>
         </Col>
 
         <Col>
         <div className='animal-link'>
-            <a href="/cats">Cats</a>
-            <img className="home-image" alt="animal pic" src={CatPic} />
+          <img className="home-image" alt="animal pic" src={CatPic} />
+            <a className="link-button" href="/cats"><Button>Adopt a Cat</Button></a>
+
             {/* <a href="/cats">Cats</a> */}
           </div>
         </Col>
         
         <Col>
         <div className="animal-link">
-            <a href="/rabbits">Rabbits</a>
             <img className="home-image" alt="animal pic" src={RabbitPic} />
+            <a className="link-button" href="/rabbits"><Button>Adopt a Rabbit</Button></a>
             {/* <a href="/rabbits">Rabbits</a> */}
           </div>
         </Col>
 
         <Col>
          <div className="animal-link">
-            <a href="/ferrets">Ferrets</a>
-            <img className="home-image" alt="animal pic" src={FerretPic} />
+           <img className="home-image" alt="animal pic" src={FerretPic} />  
+           <a className="link-button" href="/ferrets"><Button>Adopt a Ferret</Button></a>
             {/* <a href="/ferrets">Ferrets</a> */}
          </div>
         </Col>
 
         <Col>
          <div className="animal-link">
-            <a href="/guineapigs">Guinea Pigs</a>
-            <img className="home-image" alt="animal pic" src={GuineaPigPic}/>
+           <img className="home-image" alt="animal pic" src={GuineaPigPic}/>
+           <a className="link-button-guineapig" href="/guineapigs"><Button>Adopt a Guinea Pig</Button></a>
             {/* <a href="/guineapigs">Check Out Guinea Pigs</a> */}
          </div>
         </Col>
 
         <Col>
          <div className="animal-link">
-            <a href="/hamstersgerbils">Hamsters/Gerbils</a>
-            <img className="home-image" alt="animal pic" src={HamsterPic} />
+           <img className="home-image" alt="animal pic" src={HamsterPic} />
+           <a className="link-button-gerbil" href="/hamstersgerbils"><Button>Adopt a Hamster/Gerbil</Button></a>
             {/* <a href="/hamstersgerbils">Check Out Hamsters and Gerbils</a> */}
          </div>
         </Col>
