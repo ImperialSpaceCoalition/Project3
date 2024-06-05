@@ -18,7 +18,7 @@
 
 .header-body{
   height: 75px;
-  background-color: red;
+  background-color: lightseagreen;
 }
 
 .home-card{
@@ -32,7 +32,7 @@
   margin: 10px;
   padding: 5px;
   border-radius: 5px;
-  background-color: darkgray;
+  background-color: darkgrey;
 }
 
 .home-image{
@@ -40,4 +40,16 @@
   height: 225px;
   padding: 5px;
   border-radius: 10px;
+}
+
+.link-button{
+  margin: 90px;
+}
+
+.link-button-guineapig{
+  margin: 90px;
+}
+
+.link-button-gerbil{
+  margin: 50px;
 }
