@@ -27,7 +27,7 @@
 }
 
 .animal-link{
-  height: 200px;
+  height: 290px;
   width: 300px;
   margin: 10px;
   padding: 5px;
@@ -36,6 +36,8 @@
 }
 
 .home-image{
-  width: 100px;
-  height: 80px;
+  width: 290px;
+  height: 225px;
+  padding: 5px;
+  border-radius: 10px;
 }
