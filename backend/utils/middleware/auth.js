@@ -1,5 +1,3 @@
-// root/backend/utils/middleware/auth.js
-
 const jwt = require('jsonwebtoken');
 const config = require('../config'); // Assuming you have a configuration file
 
