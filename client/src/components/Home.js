@@ -22,6 +22,7 @@ function Home() {
         {/* animal of the week card on first 4/12 of page */}
         
         <Col sm={4}>
+       
           <Card.Title>Animal of the Week</Card.Title>
           <Card style={{ width: '25rem', height: '30rem', backgroundColor:"lightseagreen" }}>
          <Card.Img variant="top" src="holder.js/100px180" />
@@ -33,6 +34,7 @@ function Home() {
           {/* <Button variant="primary">Adopt</Button> */}
         </Card.Body>
           </Card>
+       
         </Col>
 
           {/* links to specific animal species on other 8/12 of page */}
@@ -41,51 +43,81 @@ function Home() {
       <Row>
 
         <Col>
-          <div className='animal-link'>
+          <div className='animal-link flip-box'>
+            <div className='flip-box-inner'>
+              <div className='flip-box-front'>
             <img className="home-image" alt="animal pic" src={DogPic} />
-            {/* <a className="link-button" href="/dogs"><Button variant="primary">Adopt a Dog</Button></a> */}
+            </div>
+            <div className='flip-box-back'>
+              <h2>Dogs!</h2>
+            </div>
+            </div>
           </div>
         </Col>
 
         <Col>
-        <div className="cat-link">
-          <img className="home-image" alt="animal pic" src={CatPic} />
-            {/* <a className="link-button" href="/cats"><Button>Adopt a Cat</Button></a> */}
-
-            {/* <a href="/cats">Cats</a> */}
+        <div className="cat-link flip-box">
+          <div className="flip-box-inner">
+            <div className="flip-box-front">
+              <img className="home-image" alt="animal pic" src={CatPic} />
+            </div> 
+            <div className='flip-box-back'>
+              <h2>Cats!</h2>
+            </div> 
           </div>
+        </div>
         </Col>
         
         <Col>
-        <div className="animal-link">
-            <img className="home-image" alt="animal pic" src={RabbitPic} />
-            {/* <a className="link-button" href="/rabbits"><Button>Adopt a Rabbit</Button></a> */}
-            {/* <a href="/rabbits">Rabbits</a> */}
+        <div className="animal-link flip-box">
+          <div className="flip-box-inner">
+            <div className="flip-box-front">
+              <img className="home-image" alt="animal pic" src={RabbitPic} />
+            </div> 
+            <div className='flip-box-back'>
+              <h2>Rabbits!</h2>
+            </div> 
           </div>
+        </div>
         </Col>
 
         <Col>
-         <div className="animal-link">
-           <img className="home-image" alt="animal pic" src={FerretPic} />  
-           {/* <a className="link-button" href="/ferrets"><Button>Adopt a Ferret</Button></a> */}
-            {/* <a href="/ferrets">Ferrets</a> */}
-         </div>
+        <div className="animal-link flip-box">
+          <div className="flip-box-inner">
+            <div className="flip-box-front">
+              <img className="home-image" alt="animal pic" src={FerretPic} />
+            </div> 
+            <div className='flip-box-back'>
+              <h2>Ferrets!</h2>
+            </div> 
+          </div>
+        </div>
         </Col>
 
         <Col>
-         <div className="animal-link">
-           <img className="home-image" alt="animal pic" src={GuineaPigPic}/>
-           {/* <a className="link-button-guineapig" href="/guineapigs"><Button>Adopt a Guinea Pig</Button></a> */}
-            {/* <a href="/guineapigs">Check Out Guinea Pigs</a> */}
-         </div>
+        <div className="animal-link flip-box">
+          <div className="flip-box-inner">
+            <div className="flip-box-front">
+              <img className="home-image" alt="animal pic" src={GuineaPigPic} />
+            </div> 
+            <div className='flip-box-back'>
+              <h2>Guinea Pigs!</h2>
+            </div> 
+          </div>
+        </div>
         </Col>
 
         <Col>
-         <div className="animal-link">
-           <img className="home-image" alt="animal pic" src={HamsterPic} />
-           {/* <a className="link-button-gerbil" href="/hamstersgerbils"><Button>Adopt a Hamster/Gerbil</Button></a> */}
-            {/* <a href="/hamstersgerbils">Check Out Hamsters and Gerbils</a> */}
-         </div>
+        <div className="animal-link flip-box">
+          <div className="flip-box-inner">
+            <div className="flip-box-front">
+              <img className="home-image" alt="animal pic" src={HamsterPic} />
+            </div> 
+            <div className='flip-box-back'>
+              <h2>Hamsters and Gerbils!</h2>
+            </div> 
+          </div>
+        </div>
         </Col>
         
 
