@@ -48,7 +48,7 @@ function Home() {
         </Col>
 
         <Col>
-        <div className='animal-link'>
+        <div className="cat-link">
           <img className="home-image" alt="animal pic" src={CatPic} />
             {/* <a className="link-button" href="/cats"><Button>Adopt a Cat</Button></a> */}
 
