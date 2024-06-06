@@ -16,6 +16,8 @@ function Home() {
       <h1>Welcome to Finding Fido</h1>
       
       <Button variant="primary" href="/availablepets">Adopt a family member today!</Button>
+      {/* <Button class="adopt-button" variant="primary" href="/pets">Adopt a family member today!</Button> */}
+      {/* <Button variant="primary"></Button> */}
       <Container>
       <Row>
         {/* animal of the week card on first 4/12 of page */}
@@ -47,7 +49,7 @@ function Home() {
         </Col>
 
         <Col>
-        <div className='animal-link'>
+        <div className="cat-link">
           <img className="home-image" alt="animal pic" src={CatPic} />
             {/* <a className="link-button" href="/cats"><Button>Adopt a Cat</Button></a> */}
 
@@ -90,6 +92,8 @@ function Home() {
 
         
       </Row>
+
+      <Button class="adopt-button" className="link-button" variant="primary" href="/pets">Adopt a family member today!</Button>
 
      
     </Container>

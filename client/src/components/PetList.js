@@ -26,6 +26,7 @@ function PetList() {
         ))}
         <input type="text" value={newPet} onChange={e => setNewPet(e.target.value)} />
         <button onClick={handleAddPet}>Add Pet</button>
+      <h1>List of Shelters Near You</h1>
     </div>
   );
 }

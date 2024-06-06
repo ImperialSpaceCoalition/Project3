@@ -6,9 +6,13 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-right: 50px;
+  margin-right: 20px;
 }
 
+h1{ 
+  background-color: darkcyan;
+  padding: 10px;
+}
 
 .nav-link{
   list-style-type: none;
@@ -36,8 +40,23 @@
   box-shadow: 4px 4px 4px lightseagreen;
 }
 
+.cat-link{
+  height: 240px;
+  width: 300px;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: darkgrey;
+  box-shadow: 4px 4px 4px lightseagreen;
+}
+
+.cat-link:hover{
+  transform: rotateY(180deg)
+  
+}
 .animal-link:hover{
   transform: scale(1.05)
+  
 }
 
 .home-image{
@@ -48,7 +67,7 @@
 }
 
 .link-button{
-  margin: 90px;
+  margin: 20px;
 }
 
 .link-button-guineapig{
@@ -58,6 +77,10 @@
 .link-button-gerbil{
   margin: 50px;
 }
+
+/* .adopt-button{ */
+  /* margin: 500px; */
+/* } */
 
 
 

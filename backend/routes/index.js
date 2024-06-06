@@ -1,7 +1,14 @@
 const express = require('express');
-const userRoutes = require('./users');
-const postRoutes = require('./posts');
 const router = express.Router();
-router.use('/users', userRoutes);
-router.use('/posts', postRoutes);
+
+// Import individual route files
+const authRoutes = require('./auth');
+const postRoutes = require('./post');
+const uploadRoutes = require('./upload');
+
+// Use the imported routes
+router.use('/api/auth', authRoutes);
+router.use('/api/posts', postRoutes);
+router.use('/api/upload', uploadRoutes);
+
 module.exports = router;
