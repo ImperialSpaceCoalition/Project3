@@ -1,32 +1,17 @@
-import { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
-// import { useMutation } from '@apollo/client';
-// import { ADD_USER } from '../utils/mutations';
-
-// import Auth from '../utils/auth';
-
-const Signup = () => {
-  // set initial form state
+const Signup = ({ setAuth }) => {
   const [userFormData, setUserFormData] = useState({
     username: '',
     email: '',
     password: '',
   });
-  // set state for form validation
   const [validated] = useState(false);
-  // set state for alert
   const [showAlert, setShowAlert] = useState(false);
-
-//   const [addUser, { error }] = useMutation(ADD_USER);
-
-//   useEffect(() => {
-//     if (error) {
-//       setShowAlert(true);
-//     } else {
-//       setShowAlert(false);
-//     }
-//   }, [error]);
+  const navigate = useNavigate();
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -35,8 +20,6 @@ const Signup = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
-    // check if form has everything (as per react-bootstrap docs)
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
@@ -44,13 +27,13 @@ const Signup = () => {
     }
 
     try {
-    //   const { data } = await addUser({
-    //     variables: { ...userFormData },
-    //   });
-    //   console.log(data);
-    //   Auth.login(data.addUser.token);
+      const response = await axios.post('http://localhost:5000/api/auth/signup', userFormData);
+      localStorage.setItem('token', response.data.token);
+      setAuth(true);
+      navigate('/');
     } catch (err) {
-      console.error(err);
+      console.error('Error signing up:', err);
+      setShowAlert(true);
     }
 
     setUserFormData({
@@ -62,15 +45,8 @@ const Signup = () => {
 
   return (
     <>
-      {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
-        {/* show alert if server response is bad */}
-        <Alert
-          dismissible
-          onClose={() => setShowAlert(false)}
-          show={showAlert}
-          variant="danger"
-        >
+        <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant="danger">
           Something went wrong with your signup!
         </Alert>
 
@@ -120,11 +96,7 @@ const Signup = () => {
         </Form.Group>
         <Button
           disabled={
-            !(
-              userFormData.username &&
-              userFormData.email &&
-              userFormData.password
-            )
+            !(userFormData.username && userFormData.email && userFormData.password)
           }
           type="submit"
           variant="success"
@@ -137,3 +109,4 @@ const Signup = () => {
 };
 
 export default Signup;
+
