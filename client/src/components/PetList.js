@@ -3,8 +3,7 @@ import React from "react";
 function PetList() {
   return (
     <div>
-      <h1>List of Pets</h1>
-      
+      <h1>List of Shelters Near You</h1>
     </div>
   );
 }
