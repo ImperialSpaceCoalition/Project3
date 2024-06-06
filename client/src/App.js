@@ -15,6 +15,8 @@ import RabbitList from './components/RabbitList';
 import FerretList from './components/FerretList';
 import GuineaPigList from './components/GuineaPigList';
 import HamsterGerbilList from './components/HamsterGerbilList';
+import AvailablePets from './components/AvailablePets';
+
 function App() {
   return (
     <Router>
@@ -32,6 +34,7 @@ function App() {
         <Route path="/profile" element={<UserProfile />} />
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/login" element={<Login />} />
+        <Route path="/availablepets" element={<AvailablePets />} />
       </Routes>
       <Footer />
     </Router>
