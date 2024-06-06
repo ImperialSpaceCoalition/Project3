@@ -49,7 +49,8 @@ function Home() {
             <img className="home-image" alt="animal pic" src={DogPic} />
             </div>
             <div className='flip-box-back'>
-              <h2>Dogs!</h2>
+              <h2>Dogs</h2>
+              <h4>Man's best friend.</h4>
             </div>
             </div>
           </div>
@@ -62,7 +63,8 @@ function Home() {
               <img className="home-image" alt="animal pic" src={CatPic} />
             </div> 
             <div className='flip-box-back'>
-              <h2>Cats!</h2>
+              <h2>Cats</h2>
+              <h4>Independent, yet cuddly.</h4>
             </div> 
           </div>
         </div>
@@ -75,7 +77,8 @@ function Home() {
               <img className="home-image" alt="animal pic" src={RabbitPic} />
             </div> 
             <div className='flip-box-back'>
-              <h2>Rabbits!</h2>
+              <h2>Rabbits</h2>
+              <h4>Hop to a cute new addition to your family.</h4>
             </div> 
           </div>
         </div>
@@ -88,7 +91,8 @@ function Home() {
               <img className="home-image" alt="animal pic" src={FerretPic} />
             </div> 
             <div className='flip-box-back'>
-              <h2>Ferrets!</h2>
+              <h2>Ferrets</h2>
+              <h4>Faster than a speeding bullet.</h4>
             </div> 
           </div>
         </div>
@@ -101,7 +105,8 @@ function Home() {
               <img className="home-image" alt="animal pic" src={GuineaPigPic} />
             </div> 
             <div className='flip-box-back'>
-              <h2>Guinea Pigs!</h2>
+              <h2>Guinea Pigs</h2>
+              <h4>Keep calm and adopt a guinea pig.</h4>
             </div> 
           </div>
         </div>
@@ -114,7 +119,8 @@ function Home() {
               <img className="home-image" alt="animal pic" src={HamsterPic} />
             </div> 
             <div className='flip-box-back'>
-              <h2>Hamsters and Gerbils!</h2>
+              <h2>Hamsters and Gerbils</h2>
+              <h4>Don't keep running on the wheel...adopt a hamster or gerbil.</h4>
             </div> 
           </div>
         </div>
