@@ -15,7 +15,7 @@ function Home() {
     <div>
       <h1>Welcome to Finding Fido</h1>
       
-      <Button class="adopt-button" variant="primary" href="/availablepets">Adopt a family member today!</Button> */
+      {/* <Button class="adopt-button" variant="primary" href="/availablepets">Adopt a family member today!</Button> */}
       {/* {/* <Button variant="primary"></Button> */}
       <Container>
       <Row>
@@ -130,7 +130,7 @@ function Home() {
         
       </Row>
 
-      <Button class="adopt-button" className="link-button" variant="primary" href="/pets">Adopt a family member today!</Button>
+      <Button class="adopt-button" className="link-button" variant="primary" href="/availablepets">Adopt a family member today!</Button>
 
      
     </Container>
