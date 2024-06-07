@@ -142,3 +142,61 @@ h1{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.auth-link {
+  border: 2px solid #000; /* Change the color as needed */
+  border-radius: 25px; /* This will give the link a rounded border */
+  padding: 10px 20px; /* Add some padding */
+  color: #02595c; /* Change the text color as needed */
+  background-color: #fff; /* Change the background color as needed */
+  text-decoration: none; /* Remove the underline */
+  text-align: center; /* Center the text */
+}
+
+.auth-link:hover {
+  background-color: #0ba1b4; /* Change the hover background color as needed */
+  color: #fff; /* Change the hover text color as needed */
+}
+
+.center-text {
+  text-align: center;
+}
