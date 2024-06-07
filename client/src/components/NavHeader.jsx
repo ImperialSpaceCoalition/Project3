@@ -18,7 +18,7 @@ export default function NavHeader() {
           {/* <Link  >Home</Link> */}
         </NavItem>
         <NavItem>
-          <NavLink as={Link} to="/profile">Profile</NavLink>
+          <NavLink as={Link} to="/profile">Social</NavLink>
           {/* <Link to="/profile">User Profile</Link> */}
         </NavItem>
         {/* <NavItem>
