@@ -35,7 +35,8 @@ function Home() {
 
   return (
     <div>
-      <h1>Welcome to Finding Fido</h1>
+      <h1>Welcome to Finding Fido-Where Pet Lovers Connect🐾</h1>
+      
       
       {/* <Button class="adopt-button" variant="primary" href="/availablepets">Adopt a family member today!</Button> */}
       {/* {/* <Button variant="primary"></Button> */}
