@@ -14,11 +14,11 @@ export default function NavHeader() {
       <h2 className="header-title">Finding Fido</h2>
       <Container className="header">
         <NavItem>
-          <NavLink as={Link} to="/">Home</NavLink>
+          <NavLink as={Link} to="/">- Home -</NavLink>
           {/* <Link  >Home</Link> */}
         </NavItem>
         <NavItem>
-          <NavLink as={Link} to="/profile">Social</NavLink>
+          <NavLink as={Link} to="/profile">- Social -</NavLink>
           {/* <Link to="/profile">User Profile</Link> */}
         </NavItem>
         {/* <NavItem>
@@ -30,7 +30,7 @@ export default function NavHeader() {
           {/* <Link to="/profile">User Profile</Link> 
         </NavItem> */}
 
-       <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
+       <Nav.Link onClick={() => setShowModal(true)}>- Login/Sign Up -</Nav.Link>
       </Container>
     </Navbar>
     <Modal
