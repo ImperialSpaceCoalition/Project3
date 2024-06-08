@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/NavHeader';
@@ -18,6 +18,8 @@ import HamsterGerbilList from './components/HamsterGerbilList';
 import AvailablePets from './components/AvailablePets';
 
 function App() {
+  const [authenticated, setAuthenticated] = useState(false); // Define the setAuth function
+
   return (
     <Router>
       <Navbar />
@@ -32,7 +34,8 @@ function App() {
         <Route path="/hamstersgerbils" element={<HamsterGerbilList />} />
         <Route path="/pets/:id" element={<PetDetail />} />
         <Route path="/profile" element={<UserProfile />} />
-        <Route path="/signup" element={<SignUp/>} />
+        {/* Pass the setAuth function as a prop to SignUp */}
+        <Route path="/signup" element={<SignUp setAuth={setAuthenticated} />} />
         <Route path="/login" element={<Login />} />
         <Route path="/availablepets" element={<AvailablePets />} />
       </Routes>
@@ -42,3 +45,4 @@ function App() {
 }
 
 export default App;
+
