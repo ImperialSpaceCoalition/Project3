@@ -1,5 +1,5 @@
 module.exports = {
-    jwtSecret: 'SilentBob',
+    jwtSecret: 'Silentbob',
     // Add other configuration variables as needed
   };
   
