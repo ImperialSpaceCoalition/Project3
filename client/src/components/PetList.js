@@ -13,34 +13,34 @@ function PetList() {
             .catch(error => console.error(error));
     }, []);
 
-    const fetchShelterPets = async () => {
+    const fetchShelterPets = async (zipCode) => {
         try {
-          const response = await axios.post(`https://api.rescuegroups.org/v5/public/animals/search`, {
-            filters: [
-                {
-                    fieldName: "animals.status",
-                    operation: "equals",
-                    criteria: "Available"
-                },
-                {
-                    fieldName: "animals.locationDistance",
-                    operation: "radius",
-                    criteria: {
-                        postalcode: zipCode,
-                        distance: 25  // Distance in miles
-                    }
+            const requestBody = {
+                data: {
+                    filterRadius: {
+                        miles: 50,
+                        postalcode: zipCode
+                    },
+                    filters: [
+                        {
+                            fieldName: "statuses.name",
+                            operation: "equals",
+                            criteria: "Available"
+                        }
+                    ]
                 }
-            ]
-        }, {
-            headers: {
-                'Content-Type': 'application/vnd.api+json',
-                'Authorization': '080fSZBT'
-            }
-        });
-            console.log(response.data);
+            };
+
+            const response = await axios.post('https://api.rescuegroups.org/v5/public/animals/search', requestBody, {
+                headers: {
+                    'Content-Type': 'application/vnd.api+json',
+                    'Authorization': '080fSZBT'
+                }
+            });
+
             setShelterPets(response.data.data || []);
         } catch (error) {
-            console.error('Error fetching shelter pets:', error);
+            console.error('Error fetching shelter pets:', error.response ? error.response.data : error.message);
         }
     };
 
@@ -52,7 +52,9 @@ function PetList() {
 
     const handleZipCodeSubmit = (event) => {
         event.preventDefault();
-        fetchShelterPets();
+        const formZipCode = event.target.elements.zipCode.value;
+        setZipCode(formZipCode);
+        fetchShelterPets(formZipCode);
     };
 
     return (
@@ -68,6 +70,7 @@ function PetList() {
                     Enter your zip code:
                     <input
                         type="text"
+                        name="zipCode"
                         value={zipCode}
                         onChange={e => setZipCode(e.target.value)}
                         style={inputStyle}
@@ -145,6 +148,7 @@ const linkStyle = {
 };
 
 export default PetList;
+
 
 
 
