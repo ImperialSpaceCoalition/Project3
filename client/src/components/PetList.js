@@ -8,24 +8,35 @@ function PetList() {
     const [zipCode, setZipCode] = useState('');
 
     useEffect(() => {
-        axios.get('/api/pets')
+        axios.get('/services/petrescueapi')
             .then(response => setPets(response.data))
             .catch(error => console.error(error));
     }, []);
 
     const fetchShelterPets = async () => {
         try {
-            const response = await axios.get(`https://api.rescuegroups.org/v5/public/animals`, {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': '080fSZBT'
+          const response = await axios.post(`https://api.rescuegroups.org/v5/public/animals/search`, {
+            filters: [
+                {
+                    fieldName: "animals.status",
+                    operation: "equals",
+                    criteria: "Available"
                 },
-                params: {
-                    location: zipCode,
-                    distance: 25, 
-                    status: 'adoptable'
+                {
+                    fieldName: "animals.locationDistance",
+                    operation: "radius",
+                    criteria: {
+                        postalcode: zipCode,
+                        distance: 25  // Distance in miles
+                    }
                 }
-            });
+            ]
+        }, {
+            headers: {
+                'Content-Type': 'application/vnd.api+json',
+                'Authorization': '080fSZBT'
+            }
+        });
             console.log(response.data);
             setShelterPets(response.data.data || []);
         } catch (error) {
@@ -117,7 +128,7 @@ const petCardStyle = {
     width: '200px',
     textAlign: 'center',
     boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
-    backgroundColor: 'white',
+    backgroundColor: 'lightgrey'
 };
 
 const imageStyle = {
@@ -134,3 +145,6 @@ const linkStyle = {
 };
 
 export default PetList;
+
+
+
