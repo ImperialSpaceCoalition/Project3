@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState} from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
@@ -10,12 +10,36 @@ import FerretPic from "./images/ferret_image.jpeg";
 import RabbitPic from "./images/rabbit_image.jpeg";
 import GuineaPigPic from "./images/guinea_pig_image.jpg";
 import HamsterPic from "./images/hamster_image.jpg";
+import {getAvailablePets} from '../services/petRescueApi'
+import LabradorPic from "./images/labrador_retriever_image.jpg"
 function Home() {
+  const [pets, setPets] = useState([]);
+
+//   useEffect(() => {
+//     const fetchPets = async () => {
+//         try {
+//             const data = await getAvailablePets(location);
+//             console.log(data);
+//             setPets(data);
+      
+//         } catch (error) {
+//             console.error('Error fetching pets', error);
+            
+//         }
+//     };
+
+//     if (location) {
+//         fetchPets();
+//     }
+// }, [location]);
+
+
   return (
     <div>
-      <h1>Welcome to Finding Fido</h1>
+      <h1> Welcome to Finding Fido-Where Pet Lovers Connect🐾</h1>
       
-      <Button class="adopt-button" variant="primary" href="/availablepets">Adopt a family member today!</Button> */
+      
+      {/* <Button class="adopt-button" variant="primary" href="/availablepets">Adopt a family member today!</Button> */}
       {/* {/* <Button variant="primary"></Button> */}
       <Container>
       <Row>
@@ -23,13 +47,15 @@ function Home() {
         
         <Col sm={4}>
        
-          <Card.Title>Animal of the Week</Card.Title>
-          <Card style={{ width: '25rem', height: '30rem', backgroundColor:"lightseagreen" }}>
-         <Card.Img variant="top" src="holder.js/100px180" />
+          <Card.Title style={{marginRight: "auto", marginLeft: "auto", color: "black", fontFamily: "papyrus", fontSize: "30px", fontWeight: "600"}}>Animal of the Week</Card.Title>
+          <Card style={{ width: '25rem', height: '40rem', backgroundColor:"lightseagreen" }}>
+         <Card.Img variant="top" src={LabradorPic} />
          <Card.Body>
-          
+         <Card.Text>
+          <h2>Brogan</h2>
+          </Card.Text>
           <Card.Text>
-          A brief explanation of the animal's personality and needs for a home and family.
+            Meet Brogan! He is a lovable, gentle, and energetic 2-year old male yellow Labrador Retriever. He is great with adults and children of all ages, as well as other pets. He needs a home and family that will give him ample exercise and stimulation, and a good deal of companionship.
           </Card.Text>
           {/* <Button variant="primary">Adopt</Button> */}
         </Card.Body>
@@ -130,7 +156,7 @@ function Home() {
         
       </Row>
 
-      <Button class="adopt-button" className="link-button" variant="primary" href="/pets">Adopt a family member today!</Button>
+      <Button class="adopt-button" className="link-button" variant="primary" href="/availablepets">Adopt a family member today!</Button>
 
      
     </Container>
