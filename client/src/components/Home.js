@@ -11,6 +11,7 @@ import RabbitPic from "./images/rabbit_image.jpeg";
 import GuineaPigPic from "./images/guinea_pig_image.jpg";
 import HamsterPic from "./images/hamster_image.jpg";
 import {getAvailablePets} from '../services/petRescueApi'
+import LabradorPic from "./images/labrador_retriever_image.jpg"
 function Home() {
   const [pets, setPets] = useState([]);
 
@@ -35,7 +36,7 @@ function Home() {
 
   return (
     <div>
-      <h1>Welcome to Finding Fido-Where Pet Lovers Connect🐾</h1>
+      <h1> Welcome to Finding Fido-Where Pet Lovers Connect🐾</h1>
       
       
       {/* <Button class="adopt-button" variant="primary" href="/availablepets">Adopt a family member today!</Button> */}
@@ -46,9 +47,9 @@ function Home() {
         
         <Col sm={4}>
        
-          <Card.Title style={{marginRight: "auto", marginLeft: "auto"}}>Animal of the Week</Card.Title>
+          <Card.Title style={{marginRight: "auto", marginLeft: "auto", color: "black", fontFamily: "papyrus", fontSize: "30px", fontWeight: "600"}}>Animal of the Week</Card.Title>
           <Card style={{ width: '25rem', height: '40rem', backgroundColor:"lightseagreen" }}>
-         <Card.Img variant="top" src="https://hips.hearstapps.com/ghk.h-cdn.co/assets/16/08/gettyimages-530330473.jpg?crop=0.659xw:0.990xh;0.123xw,0.00779xh&resize=980:*" />
+         <Card.Img variant="top" src={LabradorPic} />
          <Card.Body>
          <Card.Text>
           <h2>Brogan</h2>
