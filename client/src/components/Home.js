@@ -156,7 +156,7 @@ function Home() {
         
       </Row>
 
-      <Button class="adopt-button" className="link-button" variant="primary" href="/availablepets">Adopt a family member today!</Button>
+      <Button class="adopt-button" className="link-button" variant="primary" href="/petlist">Adopt a family member today!</Button>
 
      
     </Container>
