@@ -7,14 +7,23 @@
   flex-direction: row;
   justify-content: flex-end;
   margin-right: 20px;
-  font-size: 30px;
+  font-size: 35px;
   width: 50% !important
 }
 
 .header-title{
   font-family: "papyrus";
-  font-style: bold;
-  font-size: 50px;
+  font-weight: 550;
+  font-size: 40px;
+  background-color: darkcyan;
+  color: white;
+  border-radius: 5px;
+  padding: 1px;
+  margin: 4px;
+}
+
+.header-title:hover{
+  transform: scale(1.015)
 }
 
 h1{ 
@@ -26,6 +35,13 @@ h1{
   list-style-type: none;
   display: flex;
   margin: 20px;
+  font-weight: 550;
+  font-family: 'papyrus';
+}
+
+.nav-link:hover{
+  color: white;
+  transform: scale(1.05);
 }
 
 .header-body{
@@ -34,44 +50,38 @@ h1{
 }
 
 .home-card{
-  height: 150px;
-  width: 150px;
+  height: 140px;
+  width: 140px;
 }
 
 .animal-link{
   height: 250px;
   width: 300px;
   margin: 10px;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: lightgray;
-  box-shadow: 4px 4px 4px lightseagreen;
+  box-shadow: 4px 4px 4px lightcyan;
 }
 
 .cat-link{
-  height: 240px;
+  height: 250px;
   width: 300px;
   margin: 10px;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: lightgray;
-  box-shadow: 4px 4px 4px lightseagreen;
+  box-shadow: 4px 4px 4px lightcyan;
 }
 
 /* .cat-link:hover{ */
   /* transform: rotateY(180deg) */
   
 /* } */
+
 .animal-link:hover{
-  transform: scale(1.05)
-  
+  transform: scale(1.05) 
 }
 
 .home-image{
-  width: 290px;
-  height: 190px;
-  padding: 5px;
-  border-radius: 10px;
+  width: 300px;
+  height: 200px;
+  padding: 10px;
+  border-radius: 20px;
 }
 
 .link-button{
@@ -94,7 +104,6 @@ h1{
   background-color: transparent;
   width: 300px;
   height: 200px;
-  border: 1px solid darkgray;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -124,13 +133,13 @@ h1{
 
 /* Style the front side (fallback if image is missing) */
 .flip-box-front {
-  background-color: #bbb;
+  background-color: darkcyan;
   color: black;
 }
 
 /* Style the back side */
 .flip-box-back {
-  background-color: dodgerblue;
+  background-color: darkcyan;
   color: white;
   transform: rotateY(180deg);
 }

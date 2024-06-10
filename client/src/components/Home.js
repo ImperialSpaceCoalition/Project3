@@ -36,7 +36,7 @@ function Home() {
 
   return (
     <div>
-      <h1>Welcome to Finding Fido-Where Pet Lovers Connect🐾</h1>
+      <h1> Welcome to Finding Fido-Where Pet Lovers Connect🐾</h1>
       
       
       {/* <Button class="adopt-button" variant="primary" href="/availablepets">Adopt a family member today!</Button> */}
@@ -47,7 +47,7 @@ function Home() {
         
         <Col sm={4}>
        
-          <Card.Title style={{fontSize: "30px", color: "red", fontWeight: "900", marginRight: "auto", marginLeft: "auto"}}>Animal of the Week</Card.Title>
+          <Card.Title style={{marginRight: "auto", marginLeft: "auto"}}>Animal of the Week</Card.Title>
           <Card style={{ width: '25rem', height: '40rem', backgroundColor:"lightseagreen" }}>
          <Card.Img variant="top" src={LabradorPic} />
          <Card.Body>
