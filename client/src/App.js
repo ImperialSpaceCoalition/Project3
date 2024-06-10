@@ -15,7 +15,6 @@ import RabbitList from './components/RabbitList';
 import FerretList from './components/FerretList';
 import GuineaPigList from './components/GuineaPigList';
 import HamsterGerbilList from './components/HamsterGerbilList';
-import AvailablePets from './components/AvailablePets';
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false); // Define the setAuth function
@@ -37,7 +36,7 @@ function App() {
         {/* Pass the setAuth function as a prop to SignUp */}
         <Route path="/signup" element={<SignUp setAuth={setAuthenticated} />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/availablepets" element={<AvailablePets />} />
+        <Route path="/petlist" element={<PetList />} />
       </Routes>
       <Footer />
     </Router>

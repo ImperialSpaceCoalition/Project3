@@ -47,7 +47,7 @@ function Home() {
         
         <Col sm={4}>
        
-          <Card.Title style={{marginRight: "auto", marginLeft: "auto"}}>Animal of the Week</Card.Title>
+          <Card.Title style={{marginRight: "auto", marginLeft: "auto", color: "black", fontFamily: "papyrus", fontSize: "30px", fontWeight: "600"}}>Animal of the Week</Card.Title>
           <Card style={{ width: '25rem', height: '40rem', backgroundColor:"lightseagreen" }}>
          <Card.Img variant="top" src={LabradorPic} />
          <Card.Body>
@@ -156,7 +156,7 @@ function Home() {
         
       </Row>
 
-      <Button class="adopt-button" className="link-button" variant="primary" href="/availablepets">Adopt a family member today!</Button>
+      <Button class="adopt-button" className="link-button" variant="primary" href="/petlist">Adopt a family member today!</Button>
 
      
     </Container>
